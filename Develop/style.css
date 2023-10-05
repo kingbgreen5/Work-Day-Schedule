@@ -1,0 +1,71 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+ 
+  background-color: #112E34;
+color: #d8b188;
+  
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+.time-block {
+  border-radius: 15px;
+}
+
+.row {
+  border-top: 1px solid #112E34;
+}
+
+.hour {
+ 
+  background-color: #b7b7a4;
+  color: #324448 ;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  /* border-top: 1px dashed #000000; */
+}
+
+.past {
+ 
+  background-color: #637B7D;
+  color: #6b705c;
+}
+
+.present {
+ 
+  background-color: #3D5557;
+
+  color: white;
+  color: #6b705c;
+}
+
+.future {
+ 
+  background-color: #324448 ;
+  color: #6b705c;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #b7b7a4;
+  color:#324448 ;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}

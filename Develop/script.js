@@ -43,8 +43,6 @@ function clearClasses(){            // clears classes of hour blocks to prep for
   block5.removeClass()
 }
 
-
-
 block9 = $('#hour-9')           // BLOCK HANDLES    
 block10 = $('#hour-10')
 block11= $('#hour-11')
@@ -301,25 +299,32 @@ function renderMsgs (STORED,SAVEDVAR){
 
 }
 
-function render9() {
-  // TODO: What is the purpose of the following line of code?
-  var stored9 = JSON.parse(localStorage.getItem("save9"));
-  // TODO: Describe the functionality of the following `if` statement.
+function renderAll() {
 
-  // if theres stuff in storedToodos, then put it into toDos
-  if (stored9 !== null) {
-    block9Msg = stored9;
-    console.log(block9Msg)
-  }};
+  var stored9 = JSON.parse(localStorage.getItem("key9"));       //parses json strings
+  var stored10 = JSON.parse(localStorage.getItem("key10"));  
+  var stored11 = JSON.parse(localStorage.getItem("key11"));  
+  var stored12 = JSON.parse(localStorage.getItem("key12"));  
+  var stored1 = JSON.parse(localStorage.getItem("key1"));  
+  var stored2 = JSON.parse(localStorage.getItem("key2"));  
+  var stored3 = JSON.parse(localStorage.getItem("key3"));  
+  var stored4 = JSON.parse(localStorage.getItem("key4"));  
+  var stored5 = JSON.parse(localStorage.getItem("key5"));  
+    $('#form9').val(stored9) 
+    $('#form10').val(stored10)
+    $('#form11').val(stored11)
+    $('#form12').val(stored12)
+    $('#form1').val(stored1)
+    $('#form2').val(stored2)
+    $('#form3').val(stored3)
+    $('#form4').val(stored4)
+    $('#form5').val(stored5)
+  };
 // $(function () {};
 
-render9()
+renderAll()
 
-
-
-
-
-
+hrCheck()    
 
 /// dont delete this, used for saving as a json string
 
@@ -371,7 +376,7 @@ render9()
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
-  // TODO: Add code to get any user input that was saved in localStorage and set                    
+  // TODO: Add code to get any user input that was saved in localStorage and set                     
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //

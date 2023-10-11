@@ -26,6 +26,136 @@ $(document).ready(function(){
   var textArea4 = block4.children('textarea');
   var textArea5 = block5.children('textarea');
 
+  function hrCheck(){                                       // Logic which lets the blocks class to past/present/future based on the hour
+    if (hour == 9){
+      clearClasses()
+      block9.addClass('row time-block present')
+      block10.addClass("row time-block future" )
+      block11.addClass("row time-block future" )
+      block12.addClass("row time-block future" )
+      block1.addClass("row time-block future" )
+      block2.addClass("row time-block future" )
+      block3.addClass("row time-block future" )
+      block4.addClass("row time-block future" )
+      block5.addClass("row time-block future" )
+    }
+  
+    if (hour == 10){
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass('row time-block present')
+      block11.addClass("row time-block future" )
+      block12.addClass("row time-block future" )
+      block1.addClass("row time-block future" )
+      block2.addClass("row time-block future" )
+      block3.addClass("row time-block future" )
+      block4.addClass("row time-block future" )
+      block5.addClass("row time-block future" )
+    }
+  
+    if (hour == 11){
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass("row time-block past")
+      block11.addClass('row time-block present')
+      block12.addClass("row time-block future" )
+      block1.addClass("row time-block future" )
+      block2.addClass("row time-block future" )
+      block3.addClass("row time-block future" )
+      block4.addClass("row time-block future" )
+      block5.addClass("row time-block future" )
+    }
+  
+    if (hour == 12){
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass("row time-block past")
+      block11.addClass("row time-block past")
+      block12.addClass('row time-block present')
+      block1.addClass("row time-block future" )
+      block2.addClass("row time-block future" )
+      block3.addClass("row time-block future" )
+      block4.addClass("row time-block future" )
+      block5.addClass("row time-block future" )
+    }
+  
+    if (hour == 1){
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass("row time-block past")
+      block11.addClass("row time-block past")
+      block12.addClass("row time-block past")
+      block1.addClass('row time-block present')
+      block2.addClass("row time-block future" )
+      block3.addClass("row time-block future" )
+      block4.addClass("row time-block future" )
+      block5.addClass("row time-block future" )
+    }
+  
+    if (hour == 2){
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass("row time-block past")
+      block11.addClass("row time-block past")
+      block12.addClass("row time-block past")
+      block1.addClass("row time-block past")
+      block2.addClass('row time-block present')
+      block3.addClass("row time-block future" )
+      block4.addClass("row time-block future" )
+      block5.addClass("row time-block future" )
+    }
+  
+    if (hour == 3){  
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass("row time-block past")
+      block11.addClass("row time-block past")
+      block12.addClass("row time-block past")
+      block1.addClass("row time-block past")
+      block2.addClass("row time-block past")
+      block3.addClass('row time-block present')
+      block4.addClass("row time-block future" )
+      block5.addClass("row time-block future" )
+    }
+  
+    if (hour ==4){
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass("row time-block past")
+      block11.addClass("row time-block past")
+      block12.addClass("row time-block past")
+      block1.addClass("row time-block past")
+      block2.addClass("row time-block past")
+      block3.addClass("row time-block past")
+      block4.addClass('row time-block present')
+      block5.addClass("row time-block future" )
+    }
+    if (hour ==5){
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass("row time-block past")
+      block11.addClass("row time-block past")
+      block12.addClass("row time-block past")
+      block1.addClass("row time-block past")
+      block2.addClass("row time-block past")
+      block3.addClass("row time-block past")
+      block4.addClass("row time-block past")
+      block5.addClass('row time-block present')
+    }
+  
+    if (hour >5 && hour <=8){
+      clearClasses()
+      block9.addClass("row time-block past")
+      block10.addClass("row time-block past")
+      block11.addClass("row time-block past")
+      block12.addClass("row time-block past")
+      block1.addClass("row time-block past")
+      block2.addClass("row time-block past")
+      block3.addClass("row time-block past")
+      block4.addClass("row time-block past")
+      block5.addClass('row time-block past')
+    }};
+  
   function displayTime() {                                       //updates time in header to the second
     var timerInterval = setInterval(function() {
     var hms= dayjs().format(' hh : mm : ss');
@@ -47,135 +177,6 @@ $(document).ready(function(){
     block5.removeClass()
   }
 
-  function hrCheck(){                                       // Logic which ets the blocks class to past/present/future based on the hour
-  if (hour == 9){
-    clearClasses()
-    block9.addClass('row time-block present')
-    block10.addClass("row time-block future" )
-    block11.addClass("row time-block future" )
-    block12.addClass("row time-block future" )
-    block1.addClass("row time-block future" )
-    block2.addClass("row time-block future" )
-    block3.addClass("row time-block future" )
-    block4.addClass("row time-block future" )
-    block5.addClass("row time-block future" )
-  }
-
-  if (hour == 10){
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass('row time-block present')
-    block11.addClass("row time-block future" )
-    block12.addClass("row time-block future" )
-    block1.addClass("row time-block future" )
-    block2.addClass("row time-block future" )
-    block3.addClass("row time-block future" )
-    block4.addClass("row time-block future" )
-    block5.addClass("row time-block future" )
-  }
-
-  if (hour == 11){
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass("row time-block past")
-    block11.addClass('row time-block present')
-    block12.addClass("row time-block future" )
-    block1.addClass("row time-block future" )
-    block2.addClass("row time-block future" )
-    block3.addClass("row time-block future" )
-    block4.addClass("row time-block future" )
-    block5.addClass("row time-block future" )
-  }
-
-  if (hour == 12){
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass("row time-block past")
-    block11.addClass("row time-block past")
-    block12.addClass('row time-block present')
-    block1.addClass("row time-block future" )
-    block2.addClass("row time-block future" )
-    block3.addClass("row time-block future" )
-    block4.addClass("row time-block future" )
-    block5.addClass("row time-block future" )
-  }
-
-  if (hour == 1){
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass("row time-block past")
-    block11.addClass("row time-block past")
-    block12.addClass("row time-block past")
-    block1.addClass('row time-block present')
-    block2.addClass("row time-block future" )
-    block3.addClass("row time-block future" )
-    block4.addClass("row time-block future" )
-    block5.addClass("row time-block future" )
-  }
-
-  if (hour == 2){
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass("row time-block past")
-    block11.addClass("row time-block past")
-    block12.addClass("row time-block past")
-    block1.addClass("row time-block past")
-    block2.addClass('row time-block present')
-    block3.addClass("row time-block future" )
-    block4.addClass("row time-block future" )
-    block5.addClass("row time-block future" )
-  }
-
-  if (hour == 3){  
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass("row time-block past")
-    block11.addClass("row time-block past")
-    block12.addClass("row time-block past")
-    block1.addClass("row time-block past")
-    block2.addClass("row time-block past")
-    block3.addClass('row time-block present')
-    block4.addClass("row time-block future" )
-    block5.addClass("row time-block future" )
-  }
-
-  if (hour ==4){
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass("row time-block past")
-    block11.addClass("row time-block past")
-    block12.addClass("row time-block past")
-    block1.addClass("row time-block past")
-    block2.addClass("row time-block past")
-    block3.addClass("row time-block past")
-    block4.addClass('row time-block present')
-    block5.addClass("row time-block future" )
-  }
-  if (hour ==5){
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass("row time-block past")
-    block11.addClass("row time-block past")
-    block12.addClass("row time-block past")
-    block1.addClass("row time-block past")
-    block2.addClass("row time-block past")
-    block3.addClass("row time-block past")
-    block4.addClass("row time-block past")
-    block5.addClass('row time-block present')
-  }
-
-  if (hour >5 && hour <=8){
-    clearClasses()
-    block9.addClass("row time-block past")
-    block10.addClass("row time-block past")
-    block11.addClass("row time-block past")
-    block12.addClass("row time-block past")
-    block1.addClass("row time-block past")
-    block2.addClass("row time-block past")
-    block3.addClass("row time-block past")
-    block4.addClass("row time-block past")
-    block5.addClass('row time-block past')
-  }};
 
   function renderAll() {                                                                  // MAKES SAVED TEXT APPEAR IN TEXT AREAS
     var stored9 = JSON.parse(localStorage.getItem("hour-9"));                            //parses json strings
